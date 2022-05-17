@@ -1,0 +1,27 @@
+{{#each this}}
+  <div style='list-style:none; font-size: 44px; font-weight:900'><img
+      src='{{this.flags.svg}}'
+      width='10%'
+      height='auto'
+      alt='{{this.name.official}}'
+      style='vertical-align: middle; margin: 3px;'
+    />{{this.name.official}}</div>
+  <div>
+    <h2 style='display:inline;'>Capital: </h2>
+    <p
+      style='display:inline; font-size:24px; font-weight:500; font-style:oblique;'
+    >{{this.capital}}</p>
+  </div>
+  <div>
+    <h2 style='display:inline;'>Population: </h2>
+    <p
+      style='display:inline; font-size:24px; font-weight:500; font-style:oblique;'
+    >{{this.population}}</p>
+  </div>
+  <div>
+    <h2 style='display:inline;'>Languages: </h2>
+    <p style='display:inline; font-size:24px; font-weight:500; font-style:oblique;'>{{#each
+        languages
+      }}{{this}}, {{/each}}</p>
+  </div>
+{{/each}}
